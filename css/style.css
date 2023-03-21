@@ -414,6 +414,7 @@ line-height: 1.33;
     color: var(--border-company-color);
 }
 .checkbox:checked + .fake{
+    border: 0px;
  
     background-image: url(../images/checkbox.svg);
     background-position: center;
