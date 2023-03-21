@@ -16,10 +16,9 @@
     --border-company-color:#8E8F99;
     --footer-hover-icin-color:#31D0AA;
     --modal-bg-color:#FCFCFC;
-    
+    --border-form-color:#21212133;
+    --placeholder-color:#75757580;
 }
-a{
-    text-decoration: none;}
     *{
         margin: 0px;
         padding: 0px;
@@ -317,7 +316,7 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
     min-width: 408px;
-    height: 576px;
+    height: 584px;
      
 
     background-color: var(--modal-bg-color);
@@ -346,8 +345,137 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cub
     fill: var(--bg-color);
     background-color: var(--portfolio-buuton-bg-hover-color);
 }
-   
+   /* ----------------------modal-form---------------------------------------- */
+   .order-form {
+    padding: 72px 24px 24px 24px;
 
+    background-color: var(--modal-bg-color);
+    
+}
+
+.input{ display: block;
+    padding-left:  38px; 
+    padding-right: 38px;
+    margin-bottom: 8px;
+
+    width: 360px;
+   height: 40px;
+  
+   border: 1px solid var(--border-form-color);
+   border-color: var(--border-form-color);
+   border-radius: 4px;
+   transition: 250ms cub/ic-bezier(0.4, 0, 0.2, 1) ;
+}
+.input:focus{
+    
+}
+.svg-form{
+    position: absolute;
+    top: 26px;
+    bottom: 8px;
+    left: 16px;
+    transition: fill  250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+}
+.input:focus + .svg-form{
+    fill: var(--logo-color);
+    
+}
+.textarea{padding: 8px 16px 8px 16px;
+    resize: none;
+    width: 360px;
+    border: 1px solid var(--border-form-color);
+    border-radius: 4px;
+  
+ 
+}
+.textarea::placeholder{
+
+  font-size: 12px;
+
+color:var(--placeholder-color) ;
+ 
+}
+
+.accept-link{
+color: var(--logo-color);
+line-height: 1.33;
+}
+.checkboxdiv{
+    display: flex;
+    margin-bottom: 24px;
+  
+}
+.order_title-accept{
+    
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--border-company-color);
+}
+.checkbox:checked + .fake{
+ 
+    background-image: url(../images/checkbox.svg);
+    background-position: center;
+}
+.fake{
+    width: 16px;
+    height: 16px;
+    border: 1.25px solid #2E2F42;
+    border-radius: 2px;
+    margin-right: 8px;
+
+}
+.checkbox{ position: absolute;
+    -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+    margin-right: 8px;
+    width: 16px ;
+    height: 16px;
+   
+ 
+}
+
+.order_title1{
+    
+margin-bottom: 16px;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+text-align: center;
+letter-spacing: 0.02em;
+color: var(--color-text-color);
+}
+.order_title {
+  
+    display: flex;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: var(--border-company-color);
+
+}
+.modal-position {
+    position: relative;
+}
+.button-sabmit {
+    padding: 16px 32px 16px 32px;
+
+    width:  169px;
+
+    background-color: var(--logo-color);
+    font-weight: 500;
+font-size: 16px;
+align-items: center;
+text-align: center;
+letter-spacing: 0.04em;
+color: var(--bg-color);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+border: 2px solid var(--logo-color);
+}
 
 
     .visually-hidden {
@@ -723,6 +851,74 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cub
             
         }
 
+        .foter-form {
+            margin-left: 80px;
+        }
+        .form-Subscribe {
+            display: block;
+        }
+        .Subscribe {display: block;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            color: var(--bg-color);
+        }
+        .input-Subscribe {
+            margin: 16px 24px 0px 0px;
+            padding: 8px 16px 8px 16px ;
+
+            color: var(--bg-color);
+
+            width: 264px;
+
+            border: 1px solid rgba(255, 255, 255, 0.3);
+           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+           border-radius: 4px;
+
+           background-color: var(--hero-and-footer-bg-color);
+        }
+        ::placeholder{
+             color: var(--placeholder-color);
+            
+             font-size: 12px;
+            line-height: 2;
+             align-items: center;
+             letter-spacing: 0.04em;
+        }
+        .form-telegram{
+        margin-left: 16px;
+        }
+      
+        .buton-Subscribe {
+           display: inline-flex;
+            padding: 8px 24px 8px 24px;
+            width: 164px;
+            height:40px;
+           
+
+            font-weight: 500;
+            font-size: 16px;
+            align-items: end;
+         text-align: end;
+           letter-spacing: 0.04em;
+           color: var(--bg-color);
+           border-radius: 4px;
+           border: var(--portfolio-buuton-color);
+
+           
+
+           background-color: var(--logo-color);
+
+
+        }
+        .buton-Subscribe:hover,
+        .buton-Subscribe:focus{
+    background-color: var(--portfolio-buuton-bg-hover-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+        
+
 
 
 
@@ -897,5 +1093,5 @@ letter-spacing: 0.02em;
     letter-spacing: 0.02em;
     color: var(--portfolio-buuton-bg-color);
 }
-    
+
 
