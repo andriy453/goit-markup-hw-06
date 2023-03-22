@@ -310,7 +310,7 @@ margin-right:  auto;
 opacity: 0;
 }
 .modal {
-  
+    padding: 72px 24px 24px 24px;
 position: absolute;
 top: 50%;
 left: 50%;
@@ -339,15 +339,17 @@ transform: translate(-50%, -50%);
     border: 1px solid rgba(0, 0, 0, 0.1);
 border-radius: 50%;
 
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.button-modal:hover{
+.button-modal:hover,
+.button-modal:focus
+{
     fill: var(--bg-color);
     background-color: var(--portfolio-buuton-bg-hover-color);
 }
    /* ----------------------modal-form---------------------------------------- */
    .order-form {
-    padding: 72px 24px 24px 24px;
+   
 
     background-color: var(--modal-bg-color);
     
@@ -356,9 +358,9 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cub
 .input{ display: block;
     padding-left:  38px; 
     padding-right: 38px;
-    margin-bottom: 8px;
+  
 
-    width: 360px;
+    width: 100%;
    height: 40px;
   
    border: 1px solid var(--border-form-color);
@@ -380,9 +382,10 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cub
     fill: var(--logo-color);
     
 }
-.textarea{padding: 8px 16px 8px 16px;
+.textarea{display: block;
+    padding: 8px 16px 8px 16px;
     resize: none;
-    width: 360px;
+    width: 100%;
     border: 1px solid var(--border-form-color);
     border-radius: 4px;
   
@@ -407,7 +410,7 @@ line-height: 1.33;
 }
 .order_title-accept{
     
-    margin-bottom: 4px;
+   
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
@@ -426,6 +429,8 @@ line-height: 1.33;
     border-radius: 2px;
     margin-right: 8px;
 
+  
+
 }
 .checkbox{ position: absolute;
     -webkit-appearance: none;
@@ -435,7 +440,7 @@ line-height: 1.33;
     width: 16px ;
     height: 16px;
    
- 
+   
 }
 
 .order_title1{
@@ -450,7 +455,8 @@ color: var(--color-text-color);
 }
 .order_title {
   
-    display: flex;
+    display: block;
+    text-align: start;
     margin-bottom: 4px;
     font-size: 12px;
     line-height: 1.17;
@@ -458,8 +464,13 @@ color: var(--color-text-color);
     color: var(--border-company-color);
 
 }
+.modal-position-textarea{
+ 
+    margin-bottom: 16px;
+}
 .modal-position {
     position: relative;
+    margin-bottom: 8px;
 }
 .button-sabmit {
     padding: 16px 32px 16px 32px;
@@ -867,7 +878,8 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),  background-color 2
             margin-left: 80px;
         }
         .form-Subscribe {
-            display: block;
+            display: flex;
+            align-items: end;
         }
         .Subscribe {display: block;
             font-weight: 500;
@@ -879,6 +891,7 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),  background-color 2
         .input-Subscribe {
             margin: 16px 24px 0px 0px;
             padding: 8px 16px 8px 16px ;
+            align-items: center;
 
             color: var(--bg-color);
 
@@ -898,15 +911,17 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),  background-color 2
              align-items: center;
              letter-spacing: 0.04em;
         }
-        .span-Subscribe{display: inline-flex;
-            align-items: center;
+        .span-Subscribe
+        {
+
         }
+      
         .form-telegram{
         margin-left: 16px;
         }
       
         .buton-Subscribe {
-           display: inline-flex;
+           display: flex;
             padding: 8px 24px 8px 24px;
             width: 164px;
             height:40px;
@@ -914,8 +929,8 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),  background-color 2
 
             font-weight: 500;
             font-size: 16px;
-            align-items: end;
-         text-align: end;
+            align-items: center;
+         
            letter-spacing: 0.04em;
            color: var(--bg-color);
            border-radius: 4px;
